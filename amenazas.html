@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciberseguridad - Amenazas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    </nav>
+
+    <header class="bg-danger text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Amenazas Cibernéticas Comunes</h1>
+            <p class="lead">Conoce los peligros para poder protegerte</p>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tipos de Amenazas</h2>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Phishing</h5>
+                            <p class="card-text">Intentos fraudulentos de obtener información confidencial haciéndose pasar por una entidad confiable.</p>
+                            <button class="btn btn-outline-danger btn-sm learn-more" data-threat="phishing">Aprender más</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ransomware</h5>
+                            <p class="card-text">Malware que cifra los archivos de la víctima y exige un rescate para restaurar el acceso.</p>
+                            <button class="btn btn-outline-danger btn-sm learn-more" data-threat="ransomware">Aprender más</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Malware</h5>
+                            <p class="card-text">Software diseñado para dañar o infiltrarse en sistemas sin el consentimiento del usuario.</p>
+                            <button class="btn btn-outline-danger btn-sm learn-more" data-threat="malware">Aprender más</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ataques DDoS</h5>
+                            <p class="card-text">Ataques que sobrecargan un sistema con tráfico para interrumpir servicios legítimos.</p>
+                            <button class="btn btn-outline-danger btn-sm learn-more" data-threat="ddos">Aprender más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5">
+                <h3 class="text-center mb-4">Casos Reales</h3>
+                <div class="accordion" id="casesAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case1">
+                                Ataque a Colonial Pipeline (2021)
+                            </button>
+                        </h2>
+                        <div id="case1" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+                            <div class="accordion-body">
+                                Un ataque de ransomware paralizó el mayor oleoducto de combustible de Estados Unidos, causando escasez de gasolina en la costa este.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#case2">
+                                WannaCry (2017)
+                            </button>
+                        </h2>
+                        <div id="case2" class="accordion-collapse collapse" data-bs-parent="#casesAccordion">
+                            <div class="accordion-body">
+                                Un ransomware que afectó a más de 200,000 computadoras en 150 países, incluyendo sistemas del NHS en el Reino Unido.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="threatModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Detalles de la Amenaza</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
