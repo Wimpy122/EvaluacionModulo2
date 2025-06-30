@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Manejar clic en botones "Aprender más" en threats.html
     $('.learn-more').click(function() {
         const threatType = $(this).data('threat');
         let title = '';
@@ -29,28 +28,24 @@ $(document).ready(function() {
         $('#threatModal').modal('show');
     });
     
-    // Validación del formulario de contacto
     $('#contactForm').submit(function(e) {
         e.preventDefault();
         
-        // Validación simple
         const name = $('#name').val();
         const email = $('#email').val();
         const message = $('#message').val();
         
         if(name && email && message) {
-            // Aquí normalmente enviarías los datos a un servidor
+
             $('#formSuccess').removeClass('d-none');
             $('#contactForm')[0].reset();
             
-            // Ocultar el mensaje después de 5 segundos
             setTimeout(function() {
                 $('#formSuccess').addClass('d-none');
             }, 5000);
         }
     });
     
-    // Test de seguridad
     $('#submitTest').click(function() {
         const q1 = $('input[name="q1"]:checked').val();
         const q2 = $('input[name="q2"]:checked').val();
@@ -62,11 +57,11 @@ $(document).ready(function() {
         
         let score = 0;
         
-        // Puntaje pregunta 1
+    
         if(q1 === 'a') score += 2;
         else if(q1 === 'b') score += 1;
         
-        // Puntaje pregunta 2
+   
         if(q2 === 'a') score += 2;
         else if(q2 === 'b') score += 1;
         
